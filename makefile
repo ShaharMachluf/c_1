@@ -13,9 +13,9 @@ loopd:libclassloops.so
 mains: $(MAIN) libclassrec.a
 	$(CC) $(FLAGS) -o mains $(MAIN) libclassrec.a -lm
 maindloop: $(MAIN) libclassloops.so
-	$(CC) $(FLAGS) -o maindloop $(MAIN) libclassloops.so -lm 
+	$(CC) $(FLAGS) -o maindloop $(MAIN) ./libclassloops.so -lm 
 maindrec: $(MAIN) libclassrec.so 
-	$(CC) $(FLAGS) -o maindrec $(MAIN) libclassrec.so -lm
+	$(CC) $(FLAGS) -o maindrec $(MAIN) ./libclassrec.so -lm
 libclassloops.a: $(BASIC) $(LOOP) 
 	$(AR) -rcs libclassloops.a $(BASIC) $(LOOP)
 libclassrec.a: $(BASIC) $(REC)
