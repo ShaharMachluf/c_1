@@ -25,18 +25,13 @@ int isArmstrong(int num){
 }
 
 int isPalindrome(int num){
-    int lsb, msb;
-    double digs=0;
-    num =(double) num;
-    while(num>0){
-        digs=numberOfDigits(num);
-        lsb = num%10;
-        msb=num/pow(10,digs-1);
-        if(msb!=lsb){
-            return false;
-        }
-        num = num%(int)pow(10.0,digs-1);
-        num = num/10;
+    int x=num, rev=0;
+    while(x>0){
+        rev= rev*10+x%10;
+        x=(int)x/10;
     }
-    return true;
+    if(rev==num){
+        return true;
+    }
+    return false;
 }
