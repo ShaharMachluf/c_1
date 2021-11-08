@@ -13,8 +13,8 @@ int main(){
         high=x;
     }
     printf("The Armstrong numbers are:");
-    for(int i=0;i<=high;i++){
-        if(i>=low&&isArmstrong(i)==1){
+    for(int i=low;i<=high;i++){
+        if(isArmstrong(i)==1){
             printf(" %d",i);
         }
     }
